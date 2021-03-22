@@ -7,7 +7,7 @@ layout = [[sg.Text("Digite o primeiro número")],
           [sg.InputText(key='entrada1')],
           [sg.Text("Digite o segundo número")],
           [sg.Input(key='entrada2')],
-          [sg.Text("Digite o tipo de operação (+,-,/,*)")],
+          [sg.Text("Digite o tipo de operação (+,-,/,*,%)")],
           [sg.Input(key='entrada3')],
           [sg.Text(size=(40,1), key='saida')],
           [sg.Button('Ok'), sg.Button('Quit')]]
@@ -26,9 +26,7 @@ while True:
         lista1 = float(values['entrada1'])
         lista2 = float(values['entrada2'])
         lista3 = (values['entrada3'])
-        print(type(lista3))
         if "+" in lista3:
-            print(lista3)
             window['saida'].update(f'O resultado da conta é: {lista1+lista2}')
         elif "-" in lista3:
             window['saida'].update(f'O resultado da conta é: {lista1-lista2}')
@@ -36,7 +34,9 @@ while True:
             window['saida'].update(f'O resultado da conta é: {lista1/lista2}')
         elif "*" in lista3:
             window['saida'].update(f'O resultado da conta é: {lista1*lista2}')
-        elif "+" or "-" or "/" or "*" not in lista3:
+        elif "%" in lista3:
+            window['saida'].update(f'O resultado da conta é: {(lista1/lista2)*100}%')
+        elif "+" or "-" or "/" or "*" or "%" not in lista3:
             window['saida'].update('você deve digitar o tipo de operação que deseja!')
             continue
 
