@@ -13,7 +13,7 @@ layout = [[sg.Text("Digite o primeiro número")],
           [sg.Button('Ok'), sg.Button('Quit')]]
 
 # Create the window
-window = sg.Window('Calculadora do Yurão', layout)
+window = sg.Window('Calculadora Python - v0.1', layout)
 
 # Display and interact with the Window using an Event Loop
 while True:
