@@ -6,4 +6,3 @@
     <a href="https://www.python.org">🔗 Python</a>
 </h1>
 <p align="center">Usando python na versão: 3.8.5</p>
-<p align="center">Necessário instalar o PySimpleGUI</p>
